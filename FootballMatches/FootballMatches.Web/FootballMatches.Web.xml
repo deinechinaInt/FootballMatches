@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FootballMatches.Web</name>
+    </assembly>
+    <members>
+        <member name="M:FootballMatches.Web.Controllers.FootballMatchController.GetAllFootballMatches">
+            <summary>
+            Get all matches
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

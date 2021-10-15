@@ -7,8 +7,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace FootballMatches.Web.Models
 {
     public class PlayerModel
-    {       
-        [BindNever]
+    {               
         public int Id { get; set; }
         
         public string Name { get; set; }

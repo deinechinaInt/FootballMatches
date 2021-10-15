@@ -35,6 +35,16 @@ namespace FootballMatches.Web
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            services.AddSwaggerGen(setupAction => 
+            { 
+                setupAction.SwaggerDoc("LibraryOpenApiSpecification", new Microsoft.OpenApi.Models.OpenApiInfo() 
+                {
+                 Title = "Library API",
+                 Version ="1"
+                });
+
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +56,13 @@ namespace FootballMatches.Web
             }
 
             app.UseHttpsRedirection();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(setupAction=> {
+                setupAction.SwaggerEndpoint("/swagger/LibraryOpenApiSpecification/swagger.json", "Library API");
+                setupAction.RoutePrefix = "";
+            });
 
             app.UseRouting();            
 

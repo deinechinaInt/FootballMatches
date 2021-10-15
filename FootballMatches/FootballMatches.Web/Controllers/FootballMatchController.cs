@@ -23,7 +23,10 @@ namespace FootballMatches.Web.Controllers
         }
 
        
-
+        /// <summary>
+        /// Get all matches
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetAllFootballMatches()
         {        
